@@ -1,0 +1,142 @@
+<!--index.wxml-->
+<import src="../../templates/userInfo.wxml"/>
+
+
+<view class="page">
+        <template is="userInfo" data="{{userInfo}}"/>
+
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+                </view>
+            </view>
+            <view class="weui-tab__panel">
+                      <swiper indicator-dots="{{false}}" autoplay="{{false}}" current="{{activeIndex}}" bindchange="swiperChange">
+          <swiper-item>
+            <scroll-view scroll-y="true">
+                <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]}}">
+                    <view class="task bottom_line">
+                    <view class="task_left right_line">
+                        <image class="image_48" src="../../images/habit_plus_yellow.png"></image>
+                    </view>
+                    <view class="task_middle">
+                        <view class="task_middle-text" >Text {{item}}</view>
+                        <view class="task_middle-text" >Description {{item}}</view>
+                    </view>
+                    <view class="task_right left_line">
+                        <image class="image_48" src="../../images/habit_minus_yellow.png"></image>
+                    </view>
+                    </view>
+                </block>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" style="height:inherit;">
+                <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]}}">
+                <view class="task_wrap">
+                    <view class="task bottom_line">
+                        <checkbox class="task_left right_line">
+                        </checkbox>
+                        <view class="task_middle">
+                            <view class="task_middle-text" >Text {{item}}</view>
+                            <view class="task_middle-text" >Description {{item}}</view>
+                        </view>
+                        <view class="task_right left_line">
+                            <view>1</view>
+                            <view class="top_line">30</view>
+                        </view>
+                    </view>
+                    
+                    <view class="task_itemwrap">
+                        <block wx:for="{{[1,2]}}" wx:for-item="i">
+                            <view class="task_item bottom_line">
+                                <checkbox class="task_left" ></checkbox>
+                                <view class="task_middle ">Item {{i}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                </block>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true">
+                <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]}}">
+                <view class="task_wrap">
+                    <view class="task bottom_line">
+                    <radio class="task_left right_line">
+                    </radio>
+                    <view class="task_middle">
+                        <view class="task_middle-text" >Text {{item}}</view>
+                        <view class="task_middle-text" >Description {{item}}</view>
+                    </view>
+                    <view class="task_right left_line">
+                        <view>1</view>
+                        <view class="top_line">30</view>
+                    </view>
+                    </view>
+                    
+                    <view class="task_itemwrap">
+                        <block wx:for="{{[1,2]}}" wx:for-item="i">
+                        <view class="task_item">
+                        <checkbox class="task_left"></checkbox>
+                        <view class="task_middle">Item {{i}}</view>
+                        </view>
+                    </block>
+                    </view>
+                </view>
+                </block>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true">
+                <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]}}">
+                    <view class="task bottom_line">
+                        <view class="task_middle">
+                            <view class="task_middle-text">Text {{item}}</view>
+                            <view class="task_middle-text">Description {{item}}</view>
+                        </view>
+                        <view class="task_right">
+                            <button class="mini-btn" type="default" size="mini" >
+                                <view class="button_content">
+                                <image class="image_36_mr6" src="../../images/ic_header_gold.png"></image>
+                                <view>{{5+item}}</view>
+                                </view>
+                            </button>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+          </swiper-item>
+      </swiper>
+
+
+            </view>
+        </view>
+
+        <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+        <view class="weui-cells__title">设置</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                        <view class="weui-label">名字</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                       <input class="weui-input" placeholder="Sid"/>
+                  </view>
+             </view>
+        </view>
+        </modal>
+</view>
+
+<view class="sticky-add" bindtap="bindAddTap">
+  <!--<template is="userInfo" data="{{...userInfo}}"/>-->
+  <!--<icon type="success" size="36"/>-->
+  <image style="width:96rpx;height:96rpx;" src="../../images/plus-48.png"></image>
+</view>
+

@@ -1,0 +1,35 @@
+<view class="page">
+        <view class="weui-cells__title">创建新奖励</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">标题</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入标题"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">备注</view>
+                </view>
+                <view class="weui-cell__bd" style="padding-top:12rpx;padding-bottom:12rpx;">
+                    <textarea class="weui-textarea" placeholder="请输入备注" style="height: 3.9em;" />
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">数值</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入数值"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary">保存</button>
+            <button class="weui-btn" type="warn">删除</button>
+            <button class="weui-btn" type="default">取消</button>
+        </view>
+</view>

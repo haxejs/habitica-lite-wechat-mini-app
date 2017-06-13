@@ -1,0 +1,45 @@
+<!--logs.wxml-->
+<import src="../../templates/userInfo.wxml"/>
+
+<view class="page">
+  <template is="userInfo" data="{{userInfo}}"/>
+
+  <view style="display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;">
+    <view style="padding-left:20rpx;padding-top:10rpx;padding-bottom:10rpx;background-color:#f8f8f8;width:100%;font-size:1em;">成就勋章</view>
+
+    <view style="display:flex;flex-direction:row; flex-wrap:wrap; margin-top:10rpx;">
+      
+      <button type="default" plain="true" style="flex:0 0 30%;display:flex;flex-direction:column;align-items:center;margin-bottom:20rpx;">
+        <image style="width:128rpx;height:128rpx;" src="../../images/megaphone.png" ></image>
+        <view class="weui-badge" style="background-color:blue;">8</view>
+        <view style="font-size:0.8em;">勇气勋章</view>
+      </button>
+
+      <button type="default" plain="true" style="flex:0 0 30%;display:flex;flex-direction:column;align-items:center;margin-bottom:20rpx;">
+        <image style="width:128rpx;height:128rpx;" src="../../images/ribbon.png" ></image>
+        <view class="weui-badge" style="background-color:blue;">8</view>
+        <view style="font-size:0.8em;">完美日</view>
+      </button>
+
+      <button type="default" plain="true" style="flex:0 0 30%;display:flex;flex-direction:column;align-items:center;margin-bottom:20rpx;">
+        <image style="width:128rpx;height:128rpx;" src="../../images/rocket-traffic-ship.png" ></image>
+        <view class="weui-badge" style="background-color:blue;">8</view>
+        <view style="font-size:0.8em;">21天坚持</view>
+      </button>
+
+      <button type="default" plain="true" style="flex:0 0 30%;display:flex;flex-direction:column;align-items:center;margin-bottom:20rpx;">
+        <image style="width:128rpx;height:128rpx;" src="../../images/trophy.png" ></image>
+        <view class="weui-badge" style="background-color:blue;">8</view>
+        <view style="font-size:0.8em;">周年纪念</view>
+      </button>
+
+      <button type="default" plain="true" style="flex:0 0 30%;display:flex;flex-direction:column;align-items:center;margin-bottom:20rpx;filter: grayscale(100%);">
+        <image style="width:128rpx;height:128rpx;" src="../../images/target_audience.png" ></image>
+        <view class="weui-badge" style="background-color:blue;">0</view>
+        <view style="font-size:0.8em;">贡献</view>
+      </button>
+    </view>
+
+    <button size="mini" type="primary" style="align-self:center;margin-top:200rpx;">习惯成就未来，我也要参加</button>
+  </view>
+</view>

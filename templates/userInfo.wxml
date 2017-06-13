@@ -1,0 +1,52 @@
+<template name="userInfo">
+    <view class="header">
+        <view class="header_profile">
+            <view class="logo">
+                
+                <view class="weui-cell__hd" style="position: relative;" bindtap="bindViewTap">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                    <view class="weui-badge weui-badge_dot" style="position: absolute;top: 10rpx;right: 10rpx;"></view>
+                </view>
+
+                <view class="userinfo-nickname" bindtap="bindEditName">
+                  {{userInfo.nickName}}<image class="image_24" src="../../images/edit.png"></image>     
+                </view>
+            </view>
+            <view class="progress">
+                <view class="progress_line">
+                    <image class="image_32_mr12" src="../../images/ic_header_heart.png"></image>
+                    <view class="progress_line_body">
+                        <progress percent="100" active stroke-width="12" color="red"/>
+                        <view class="score_label">
+                            <text>50/50</text>
+                            <text>生命</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="progress_line">
+                    <image class="image_32_mr12" src="../../images/ic_header_exp.png"></image>
+                    <view class="progress_line_body">
+                        <progress percent="80" active stroke-width="12" color="orange"/>
+                        <view class="score_label">
+                            <text>180/200</text>
+                            <text>经验</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="header_wealth">
+            <view class="header_wealth_level">
+            级别:2
+            </view>
+            <view class="header_wealth_count">
+                <image class="image_32_mr12" src="../../images/ic_header_gold.png"></image>
+                <view>20</view>
+            </view>
+            <view class="header_wealth_count">
+                <image class="image_32_mr12" src="../../images/ic_header_silver.png"></image>
+                <view>99</view>
+            </view>
+        </view>
+    </view>
+</template>

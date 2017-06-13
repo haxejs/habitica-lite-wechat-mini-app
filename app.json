@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/task/habit",
+    "pages/task/daily",
+    "pages/task/todo",
+    "pages/task/award",
+    "pages/guide/guide",
+    "pages/achivement/achivement"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "习惯成就未来",
+    "navigationBarTextStyle":"black"
+  }
+}

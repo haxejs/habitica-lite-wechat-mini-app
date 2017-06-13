@@ -1,0 +1,11 @@
+<view class="page">
+  <swiper style="height:100%;" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{guides}}" wx:key="*this">
+          <swiper-item style="display:flex;align-items:center;flex-direction:column;justify-content:center;">
+              <view>{{item}}</view>
+              <button wx:if="{{index==guides.length-1}}" style="margin-top:200rpx;;" bindtap="bindEnterTap" type="primary" size="default">Enter</button>
+          </swiper-item>
+        </block>
+  </swiper>
+</view>

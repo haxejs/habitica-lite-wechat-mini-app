@@ -1,0 +1,122 @@
+/**app.wxss**/
+@import "./weui.wxss";
+
+page,
+.page,
+.weui-tab__panel{
+    height: 100%;
+}
+
+.weui-navbar{
+    background-color: aliceblue;
+}
+
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.weui-tab__panel{
+    font-size: 1em;
+}
+
+.header{
+    padding:20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.header_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    flex:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-size: xx-small;
+  margin: 0px;
+  padding: 0px;
+  color: #aaa;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200rpx;
+}
+
+.progress{
+    flex:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.progress_line{
+    display:flex;
+    align-items:flex-start;
+}
+
+.image_32_mr12{
+    width:32rpx;
+    height:32rpx; 
+    margin-right:12rpx;
+}
+
+.progress_line_body{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    align-items:space-between;
+}
+
+.score_label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top:10rpx;
+    font-size: x-small;
+}
+
+.header_wealth{
+    margin-top: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 0.8em;
+}
+
+.header_wealth_level{
+    /*padding-left:10rpx;*/
+    margin-right:auto;
+}
+
+.header_wealth_count{
+    padding-left:20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.image_24{
+    width:24rpx;
+    height:24rpx;
+}
+
+.gray { 
+    filter: grayscale(100%);
+}
